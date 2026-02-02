@@ -8,13 +8,7 @@
 ![Status](https://img.shields.io/badge/Status-Completed-green)
 
 A fully parametric **3D CAD model** of a steel girder bridge, developed effectively using **Constructive Solid Geometry (CSG)** logic and Python.
-
-[**View Demo Video**](PUT_YOUR_VIDEO_LINK_HERE)
-
 <br />
-
-<img src="bridge_preview.png" alt="Bridge Preview" width="800">
-<p><i>Figure 1: Visualization featuring two steel I-girders (blue) supporting a translucent reinforced concrete deck.</i></p>
 
 </div>
 
