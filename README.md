@@ -1,6 +1,7 @@
+````md
 <div align="center">
 
-# 🌉 Parametric Steel Girder Bridge Model
+# 🌉 Parametric Steel Girder Bridge Model  
 ### FOSSEE Osdag Internship Screening Task 2026
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue?style=flat&logo=python)
@@ -16,39 +17,97 @@ A fully parametric **3D CAD model** of a steel girder bridge, developed effectiv
 
 ## 🚀 Key Features
 
-* **⚡ Fully Parametric:** The entire geometry (Span, Width, Deck Depth) is driven by variable constants, allowing for instant resizing without code rewriting.
-* **🏗️ Component Assembly:**
-    * **I-Girders:** Custom-built using CSG fusion of web and flange primitives.
-    * **Concrete Deck:** Automatically positioned relative to girder height.
-* **🎨 Visual Materials:** Distinct color coding for **Steel (Blue)** and **Concrete (Gray/Translucent)** for clear structural differentiation.
+* **⚡ Fully Parametric:** Geometry (Span, Width, Deck Thickness, Web Height) driven entirely by variables—resize instantly without rewriting code.  
+* **🏗️ Component Assembly:**  
+  - **I-Girders:** Constructed using CSG fusion of web and flange components.  
+  - **Concrete Deck:** Automatically positioned with respect to girder height.  
+* **🎨 Material Visualization:**  
+  - **Steel → Blue**  
+  - **Concrete → Gray/Translucent**  
+  Enables easy visual differentiation between structural elements.
+
+---
 
 ## 🛠️ Technical Specifications
 
-The model parameters can be adjusted within the main script variables:
+All key parameters are defined within the main script:
 
 | Parameter | Default Value | Unit | Description |
-| :--- | :--- | :--- | :--- |
+|----------|----------------|------|-------------|
 | **SPAN** | `10000.0` | mm | Total length of the bridge |
-| **WIDTH** | `4000.0` | mm | Total width of the deck |
-| **DECK_TH** | `250.0` | mm | Thickness of the concrete slab |
+| **WIDTH** | `4000.0` | mm | Overall deck width |
+| **DECK_TH** | `250.0` | mm | Concrete deck thickness |
 | **WEB_H** | `1000.0` | mm | Height of the steel girder web |
+
+---
 
 ## 💻 Installation & Setup
 
-This project utilizes **pythonOCC**, which requires a Conda environment for dependency management.
+This project uses **pythonOCC**, which is best installed in a Conda environment.
 
-### 1. Prerequisites
-Ensure you have [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) installed.
+### 1️⃣ Prerequisites  
+Install **Anaconda** or **Miniconda**:
 
-### 2. Environment Configuration
-Run the following commands in your Anaconda Prompt/Terminal:
+- https://www.anaconda.com/  
+- https://docs.conda.io/en/latest/miniconda.html  
+
+### 2️⃣ Environment Setup  
+Run the following commands:
 
 ```bash
-# 1. Create a clean environment
+# Create a new environment
 conda create --name osdag_project python=3.9
 
-# 2. Activate the environment
+# Activate the environment
 conda activate osdag_project
 
-# 3. Install the core 3D library
+# Install pythonOCC
 conda install -c conda-forge pythonocc-core
+````
+
+---
+
+## ▶️ Running the Model
+
+Execute the main script:
+
+```bash
+python bridge_model.py
+```
+
+This launches a 3D viewer showing:
+
+* I-girder assembly
+* Concrete deck
+* Color-coded materials
+
+---
+
+## 📂 Project Structure
+
+```
+📁 parametric_bridge
+│── bridge_model.py          # Main file — geometry + assembly logic
+│── utils/
+│   └── primitives.py        # Web + flange shape creation utilities
+│── README.md
+```
+
+---
+
+## 📸 Output Visualization
+
+The script renders:
+
+* Parametric I-Girders
+* Deck placement relative to girder height
+* Fully assembled 3D CAD model
+
+---
+
+## 📜 License
+
+Developed as part of **FOSSEE Osdag Internship Screening Task 2026**.
+
+---
+
